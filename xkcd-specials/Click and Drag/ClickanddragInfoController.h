@@ -10,8 +10,6 @@
 
 @interface ClickanddragInfoController : UIViewController
 
-@property (nonatomic, retain) IBOutlet UILabel *labelAboutXkcd;
-@property (nonatomic, retain) IBOutlet UILabel *labelAboutApp;
 @property (nonatomic, retain) IBOutlet UILabel *labelTitle;
 @property (nonatomic, retain) IBOutlet UILabel *labelUsage;
 

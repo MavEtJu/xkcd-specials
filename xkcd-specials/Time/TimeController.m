@@ -178,4 +178,9 @@ typedef NS_ENUM(NSInteger, Direction) {
     self.images = [self.images sortedArrayUsingSelector:@selector(compare:)];
 }
 
+- (IBAction)closeView:(id)sender
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 @end

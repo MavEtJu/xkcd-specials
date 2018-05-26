@@ -19,6 +19,7 @@
 		E88930C820B91B7500B4B9C9 /* ClickanddragInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = E88930C620B91B7400B4B9C9 /* ClickanddragInfoController.m */; };
 		E88930C920B91B7500B4B9C9 /* ClickanddragController.m in Sources */ = {isa = PBXBuildFile; fileRef = E88930C720B91B7500B4B9C9 /* ClickanddragController.m */; };
 		E88930CB20B91C5F00B4B9C9 /* Images - Click and Drag in Resources */ = {isa = PBXBuildFile; fileRef = E88930CA20B91C5F00B4B9C9 /* Images - Click and Drag */; };
+		E88930CE20B9336000B4B9C9 /* InfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = E88930CD20B9336000B4B9C9 /* InfoController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,8 @@
 		E88930C620B91B7400B4B9C9 /* ClickanddragInfoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClickanddragInfoController.m; sourceTree = "<group>"; };
 		E88930C720B91B7500B4B9C9 /* ClickanddragController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClickanddragController.m; sourceTree = "<group>"; };
 		E88930CA20B91C5F00B4B9C9 /* Images - Click and Drag */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Images - Click and Drag"; sourceTree = "<group>"; };
+		E88930CC20B9336000B4B9C9 /* InfoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InfoController.h; sourceTree = "<group>"; };
+		E88930CD20B9336000B4B9C9 /* InfoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InfoController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +81,8 @@
 				E88930A220B90B6200B4B9C9 /* AppDelegate.m */,
 				E88930A420B90B6200B4B9C9 /* MainController.h */,
 				E88930A520B90B6200B4B9C9 /* MainController.m */,
+				E88930CC20B9336000B4B9C9 /* InfoController.h */,
+				E88930CD20B9336000B4B9C9 /* InfoController.m */,
 				E88930BD20B913DE00B4B9C9 /* Time */,
 				E88930C020B919AC00B4B9C9 /* Click and Drag */,
 				E88930A720B90B6200B4B9C9 /* Main.storyboard */,
@@ -188,6 +193,7 @@
 				E88930C920B91B7500B4B9C9 /* ClickanddragController.m in Sources */,
 				E88930C320B919DA00B4B9C9 /* TimeInfoController.m in Sources */,
 				E88930A620B90B6200B4B9C9 /* MainController.m in Sources */,
+				E88930CE20B9336000B4B9C9 /* InfoController.m in Sources */,
 				E88930C820B91B7500B4B9C9 /* ClickanddragInfoController.m in Sources */,
 				E88930B120B90B6300B4B9C9 /* main.m in Sources */,
 				E88930B920B90F7E00B4B9C9 /* TimeController.m in Sources */,

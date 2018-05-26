@@ -18,6 +18,7 @@
 @property (nonatomic, retain) IBOutlet UILabel *labelRight;
 @property (nonatomic, retain) IBOutlet UILabel *labelLeft;
 
+- (IBAction)closeView:(id)sender;
 - (IBAction)sliderValueChanged:(UISlider *)sender;
 - (IBAction)buttonStop:(UIButton *)sender;
 - (IBAction)buttonForward:(UIButton *)sender;

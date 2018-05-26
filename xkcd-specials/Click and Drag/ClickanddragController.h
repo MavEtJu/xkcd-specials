@@ -14,6 +14,7 @@
 @property (nonatomic, retain) IBOutlet UILabel *labelZoomLevel;
 @property (nonatomic, retain) IBOutlet UISlider *sliderZoomLevel;
 
+- (IBAction)closeView:(id)sender;
 - (IBAction)moveSlider:(UISlider *)slider;
 - (IBAction)doubleTap:(UITapGestureRecognizer *)gesture;
 
