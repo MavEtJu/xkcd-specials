@@ -173,7 +173,6 @@
 
 - (IBAction)moveSlider:(UISlider *)slider
 {
-    NSLog(@"moveSlider");
     NSInteger i = slider.value * 5;
 
     switch (i) {
@@ -201,7 +200,6 @@
 
 - (IBAction)singleTap:(UITapGestureRecognizer *)gesture
 {
-    NSLog(@"singleTap");
     // Just relocate
     CGRect bounds = [[UIScreen mainScreen] bounds];
     CGSize size = bounds.size;
@@ -221,7 +219,6 @@
 
 - (IBAction)doubleTap:(UITapGestureRecognizer *)gesture
 {
-    NSLog(@"doubleTap");
     CGRect bounds = [[UIScreen mainScreen] bounds];
     CGSize size = bounds.size;
 
