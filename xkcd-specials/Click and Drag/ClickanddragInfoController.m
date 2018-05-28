@@ -18,7 +18,7 @@
 {
     [super viewDidLoad];
 
-    self.labelTitle.text = @"XKCD - CLICK AND DRAG";
+    self.labelTitle.text = @"XKCD 1110 - CLICK AND DRAG";
     self.labelUsage.text = @"Just scroll around and discover the world.\nZoom in or out on the slider to see more (or less).\nTap to recenter a position.";
 }
 

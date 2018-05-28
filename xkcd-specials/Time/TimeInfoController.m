@@ -18,7 +18,7 @@
 {
     [super viewDidLoad];
 
-    self.labelTitle.text = @"XKCD - TIME";
+    self.labelTitle.text = @"XKCD 1190 - TIME";
     self.labelUsage.text = @"Press the backward, pause and forward button to play automatically.\nSwipe left and right to go forward one by one frame.\nTap to stop, tap to go one further. Double tap to play again.";
 }
 

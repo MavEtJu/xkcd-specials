@@ -174,8 +174,13 @@ typedef NS_ENUM(NSInteger, Direction) {
 - (void)loadImages
 {
     NSFileManager *fm = [[NSFileManager alloc] init];
-    self.images = [fm contentsOfDirectoryAtPath:[NSString stringWithFormat:@"%@/Images - Time", [[NSBundle mainBundle] resourcePath]] error:nil];
-    self.images = [self.images sortedArrayUsingSelector:@selector(compare:)];
+    NSMutableArray *files = [NSMutableArray arrayWithCapacity:100];
+    [[fm contentsOfDirectoryAtPath:[NSString stringWithFormat:@"%@/Images - Time", [[NSBundle mainBundle] resourcePath]] error:nil] enumerateObjectsUsingBlock:^(NSString * _Nonnull filename, NSUInteger idx, BOOL * _Nonnull stop) {
+        if ([[filename pathExtension] isEqualToString:@"png"] == YES)
+            if ([[filename substringToIndex:4] isEqualToString:@"xkcd"] == YES)
+                [files addObject:filename];
+    }];
+    self.images = [files sortedArrayUsingSelector:@selector(compare:)];
 }
 
 - (IBAction)closeView:(id)sender

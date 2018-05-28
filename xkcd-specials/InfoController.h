@@ -11,6 +11,7 @@
 @interface InfoController : UIViewController
 
 @property (nonatomic, retain) IBOutlet UILabel *labelAboutXkcd;
+@property (nonatomic, retain) IBOutlet UILabel *labelIntroduction;
 @property (nonatomic, retain) IBOutlet UILabel *labelAboutApp;
 @property (nonatomic, retain) IBOutlet UILabel *labelTitle;
 

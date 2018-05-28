@@ -13,6 +13,8 @@
 @property (nonatomic, retain) NSArray<NSArray<UIImageView *> *> *imageViews;
 @property (nonatomic, retain) NSArray<NSString *> *tileNames;
 @property (nonatomic        ) CGFloat zoomLevel;
+@property (nonatomic        ) NSArray<NSString *> *introImages;
+@property (nonatomic, retain) NSOperationQueue *introQueue;
 
 @end
 
@@ -31,12 +33,45 @@
 {
     [super viewDidLoad];
 
+    self.introImages = @[
+        [NSString stringWithFormat:@"%@/Images - Click and Drag/Click-1.png", [[NSBundle mainBundle] resourcePath]],
+        [NSString stringWithFormat:@"%@/Images - Click and Drag/Click-2.png", [[NSBundle mainBundle] resourcePath]],
+        [NSString stringWithFormat:@"%@/Images - Click and Drag/Click-3.png", [[NSBundle mainBundle] resourcePath]],
+    ];
+
+    self.introQueue = [[NSOperationQueue alloc] init];
+    [self.introQueue addOperationWithBlock:^{
+        [self viewLoadIntro:0];
+        [NSThread sleepForTimeInterval:2];
+        [self viewLoadIntro:1];
+        [NSThread sleepForTimeInterval:2];
+        [self viewLoadIntro:2];
+        [NSThread sleepForTimeInterval:2];
+        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+            self.introImage.hidden = YES;
+            [self viewLoadScrollView];
+        }];
+    }];
+}
+
+- (void)viewLoadIntro:(NSInteger)intro
+{
+    [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+        self.introImage.image = [UIImage imageWithContentsOfFile:[self.introImages objectAtIndex:intro]];
+    }];
+}
+
+
+- (void)viewLoadScrollView
+{
     NSMutableArray<NSMutableArray *> *imageViews = [NSMutableArray arrayWithCapacity:(NORTH + SOUTH)];
     [self initTiles];
 
     self.zoomLevel = 1;
     self.sliderZoomLevel.value = 0.5;
     self.scrollview.delegate = self;
+
+    [self.singleTap requireGestureRecognizerToFail:self.doubleTap];
 
     for (NSInteger lat = -NORTH; lat < SOUTH; lat++) {
         NSMutableArray *views = [NSMutableArray arrayWithCapacity:(EAST + WEST)];
@@ -163,14 +198,67 @@
     [self adjustTiles];
 }
 
-- (IBAction)doubleTap:(UITapGestureRecognizer *)gesture
+- (IBAction)singleTap:(UITapGestureRecognizer *)gesture
 {
+    // Just relocate
     CGRect bounds = [[UIScreen mainScreen] bounds];
     CGSize size = bounds.size;
 
     CGPoint touchPoint = [gesture locationInView:self.scrollview];
     [self.scrollview setContentOffset:CGPointMake(touchPoint.x - size.width / 2, touchPoint.y - size.height / 2) animated:TRUE];
-    NSLog(@"touch %0.2f %0.2f", touchPoint.x, touchPoint.y);
+}
+
+- (IBAction)doubleTap:(UITapGestureRecognizer *)gesture
+{
+    CGRect bounds = [[UIScreen mainScreen] bounds];
+    CGSize size = bounds.size;
+
+    [UIView animateWithDuration:0.5 animations:^{
+        // First zoom in
+        if (self.zoomLevel < 1) {
+            self.zoomLevel *= 2;
+        } else if (self.zoomLevel < 4) {
+            self.zoomLevel++;
+        }
+
+        if (self.zoomLevel >= 1)
+            self.sliderZoomLevel.value = (self.zoomLevel + 1) / 5.0;
+        else
+            self.sliderZoomLevel.value = (self.zoomLevel * 4 - 1) / 5.0;
+
+        // them move to the right place
+        CGPoint touchPoint = [gesture locationInView:self.scrollview];
+        [self.scrollview setContentOffset:CGPointMake(touchPoint.x - size.width / 2, touchPoint.y - size.height / 2) animated:FALSE];
+
+        // And update the size
+        [self adjustTiles];
+    }];
+}
+
+- (IBAction)zoomGesture:(UIPinchGestureRecognizer *)gesture
+{
+    if (gesture.state == UIGestureRecognizerStateEnded) {
+        if (gesture.scale > 1) {    // Zoom in
+            if (self.zoomLevel < 1) {
+                self.zoomLevel *= 2;
+            } else if (self.zoomLevel < 4) {
+                self.zoomLevel++;
+            }
+        } else {                    // Zoom out
+            if (self.zoomLevel > 1) {
+                self.zoomLevel--;
+            } else if (self.zoomLevel > 0.4) {
+                self.zoomLevel /= 2;
+            }
+        }
+
+        if (self.zoomLevel >= 1)
+            self.sliderZoomLevel.value = (self.zoomLevel + 1) / 5.0;
+        else
+            self.sliderZoomLevel.value = (self.zoomLevel * 4 - 1) / 5.0;
+
+        [self adjustTiles];
+    }
 }
 
 - (void)initTiles
