@@ -173,6 +173,7 @@
 
 - (IBAction)moveSlider:(UISlider *)slider
 {
+    NSLog(@"moveSlider");
     NSInteger i = slider.value * 5;
 
     switch (i) {
@@ -200,16 +201,27 @@
 
 - (IBAction)singleTap:(UITapGestureRecognizer *)gesture
 {
+    NSLog(@"singleTap");
     // Just relocate
     CGRect bounds = [[UIScreen mainScreen] bounds];
     CGSize size = bounds.size;
 
     CGPoint touchPoint = [gesture locationInView:self.scrollview];
+
+    // Do not react to a tap on the slider.
+    CGPoint point = [self.scrollview convertPoint:touchPoint toView:self.view];
+    if (self.sliderZoomLevel.frame.origin.x < point.x &&
+        point.x < self.sliderZoomLevel.frame.origin.x + 3 * self.sliderZoomLevel.frame.size.width &&
+        self.sliderZoomLevel.frame.origin.y < point.y &&
+        point.y < self.sliderZoomLevel.frame.origin.y + 3 * self.sliderZoomLevel.frame.size.height)
+        return;
+
     [self.scrollview setContentOffset:CGPointMake(touchPoint.x - size.width / 2, touchPoint.y - size.height / 2) animated:TRUE];
 }
 
 - (IBAction)doubleTap:(UITapGestureRecognizer *)gesture
 {
+    NSLog(@"doubleTap");
     CGRect bounds = [[UIScreen mainScreen] bounds];
     CGSize size = bounds.size;
 
@@ -237,6 +249,7 @@
 
 - (IBAction)zoomGesture:(UIPinchGestureRecognizer *)gesture
 {
+    NSLog(@"zoomGesture");
     if (gesture.state == UIGestureRecognizerStateEnded) {
         if (gesture.scale > 1) {    // Zoom in
             if (self.zoomLevel < 1) {
