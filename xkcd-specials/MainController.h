@@ -12,8 +12,10 @@
 
 @property (nonatomic, retain) IBOutlet UIImageView *timeIV;
 @property (nonatomic, retain) IBOutlet UIImageView *clickanddragIV;
+@property (nonatomic, retain) IBOutlet UIImageView *hoverboardIV;
 @property (nonatomic, retain) IBOutlet UIButton *timeButton;
 @property (nonatomic, retain) IBOutlet UIButton *clickanddragButton;
+@property (nonatomic, retain) IBOutlet UIButton *hoverboardButton;
 
 
 @end
