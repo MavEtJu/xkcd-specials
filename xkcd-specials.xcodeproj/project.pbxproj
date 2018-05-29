@@ -20,6 +20,16 @@
 		E88930C920B91B7500B4B9C9 /* ClickanddragController.m in Sources */ = {isa = PBXBuildFile; fileRef = E88930C720B91B7500B4B9C9 /* ClickanddragController.m */; };
 		E88930CB20B91C5F00B4B9C9 /* Images - Click and Drag in Resources */ = {isa = PBXBuildFile; fileRef = E88930CA20B91C5F00B4B9C9 /* Images - Click and Drag */; };
 		E88930CE20B9336000B4B9C9 /* InfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = E88930CD20B9336000B4B9C9 /* InfoController.m */; };
+		E88930DA20BCD19E00B4B9C9 /* icon-80.png in Resources */ = {isa = PBXBuildFile; fileRef = E88930D020BCD19D00B4B9C9 /* icon-80.png */; };
+		E88930DB20BCD19E00B4B9C9 /* icon-87.png in Resources */ = {isa = PBXBuildFile; fileRef = E88930D120BCD19D00B4B9C9 /* icon-87.png */; };
+		E88930DC20BCD19E00B4B9C9 /* icon-120.png in Resources */ = {isa = PBXBuildFile; fileRef = E88930D220BCD19D00B4B9C9 /* icon-120.png */; };
+		E88930DD20BCD19E00B4B9C9 /* icon-180.png in Resources */ = {isa = PBXBuildFile; fileRef = E88930D320BCD19D00B4B9C9 /* icon-180.png */; };
+		E88930DE20BCD19E00B4B9C9 /* icon-58.png in Resources */ = {isa = PBXBuildFile; fileRef = E88930D420BCD19D00B4B9C9 /* icon-58.png */; };
+		E88930DF20BCD19E00B4B9C9 /* icon-60.png in Resources */ = {isa = PBXBuildFile; fileRef = E88930D520BCD19E00B4B9C9 /* icon-60.png */; };
+		E88930E020BCD19E00B4B9C9 /* icon-40.png in Resources */ = {isa = PBXBuildFile; fileRef = E88930D620BCD19E00B4B9C9 /* icon-40.png */; };
+		E88930E120BCD19E00B4B9C9 /* icon-167.png in Resources */ = {isa = PBXBuildFile; fileRef = E88930D720BCD19E00B4B9C9 /* icon-167.png */; };
+		E88930E220BCD19E00B4B9C9 /* icon-1024.png in Resources */ = {isa = PBXBuildFile; fileRef = E88930D820BCD19E00B4B9C9 /* icon-1024.png */; };
+		E88930E320BCD19E00B4B9C9 /* icon-152.png in Resources */ = {isa = PBXBuildFile; fileRef = E88930D920BCD19E00B4B9C9 /* icon-152.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +55,16 @@
 		E88930CA20B91C5F00B4B9C9 /* Images - Click and Drag */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Images - Click and Drag"; sourceTree = "<group>"; };
 		E88930CC20B9336000B4B9C9 /* InfoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InfoController.h; sourceTree = "<group>"; };
 		E88930CD20B9336000B4B9C9 /* InfoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InfoController.m; sourceTree = "<group>"; };
+		E88930D020BCD19D00B4B9C9 /* icon-80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-80.png"; sourceTree = SOURCE_ROOT; };
+		E88930D120BCD19D00B4B9C9 /* icon-87.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-87.png"; sourceTree = SOURCE_ROOT; };
+		E88930D220BCD19D00B4B9C9 /* icon-120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-120.png"; sourceTree = SOURCE_ROOT; };
+		E88930D320BCD19D00B4B9C9 /* icon-180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-180.png"; sourceTree = SOURCE_ROOT; };
+		E88930D420BCD19D00B4B9C9 /* icon-58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-58.png"; sourceTree = SOURCE_ROOT; };
+		E88930D520BCD19E00B4B9C9 /* icon-60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-60.png"; sourceTree = SOURCE_ROOT; };
+		E88930D620BCD19E00B4B9C9 /* icon-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-40.png"; sourceTree = SOURCE_ROOT; };
+		E88930D720BCD19E00B4B9C9 /* icon-167.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-167.png"; sourceTree = SOURCE_ROOT; };
+		E88930D820BCD19E00B4B9C9 /* icon-1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-1024.png"; sourceTree = SOURCE_ROOT; };
+		E88930D920BCD19E00B4B9C9 /* icon-152.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-152.png"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +110,7 @@
 				E88930AC20B90B6300B4B9C9 /* LaunchScreen.storyboard */,
 				E88930AF20B90B6300B4B9C9 /* Info.plist */,
 				E88930B020B90B6300B4B9C9 /* main.m */,
+				E88930CF20BCD17F00B4B9C9 /* Icons */,
 				E88930CA20B91C5F00B4B9C9 /* Images - Click and Drag */,
 				E88930BE20B9155600B4B9C9 /* Images - Time */,
 			);
@@ -116,6 +137,23 @@
 				E88930C620B91B7400B4B9C9 /* ClickanddragInfoController.m */,
 			);
 			path = "Click and Drag";
+			sourceTree = "<group>";
+		};
+		E88930CF20BCD17F00B4B9C9 /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				E88930D620BCD19E00B4B9C9 /* icon-40.png */,
+				E88930D420BCD19D00B4B9C9 /* icon-58.png */,
+				E88930D520BCD19E00B4B9C9 /* icon-60.png */,
+				E88930D020BCD19D00B4B9C9 /* icon-80.png */,
+				E88930D120BCD19D00B4B9C9 /* icon-87.png */,
+				E88930D220BCD19D00B4B9C9 /* icon-120.png */,
+				E88930D920BCD19E00B4B9C9 /* icon-152.png */,
+				E88930D720BCD19E00B4B9C9 /* icon-167.png */,
+				E88930D320BCD19D00B4B9C9 /* icon-180.png */,
+				E88930D820BCD19E00B4B9C9 /* icon-1024.png */,
+			);
+			path = Icons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,11 +213,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E88930DC20BCD19E00B4B9C9 /* icon-120.png in Resources */,
 				E88930CB20B91C5F00B4B9C9 /* Images - Click and Drag in Resources */,
+				E88930DD20BCD19E00B4B9C9 /* icon-180.png in Resources */,
+				E88930E120BCD19E00B4B9C9 /* icon-167.png in Resources */,
+				E88930DE20BCD19E00B4B9C9 /* icon-58.png in Resources */,
+				E88930DF20BCD19E00B4B9C9 /* icon-60.png in Resources */,
 				E88930BF20B9155600B4B9C9 /* Images - Time in Resources */,
+				E88930E220BCD19E00B4B9C9 /* icon-1024.png in Resources */,
+				E88930DA20BCD19E00B4B9C9 /* icon-80.png in Resources */,
+				E88930DB20BCD19E00B4B9C9 /* icon-87.png in Resources */,
+				E88930E020BCD19E00B4B9C9 /* icon-40.png in Resources */,
 				E88930AE20B90B6300B4B9C9 /* LaunchScreen.storyboard in Resources */,
 				E88930AB20B90B6300B4B9C9 /* Assets.xcassets in Resources */,
 				E88930A920B90B6200B4B9C9 /* Main.storyboard in Resources */,
+				E88930E320BCD19E00B4B9C9 /* icon-152.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +388,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NRQ2A5FE8M;
 				INFOPLIST_FILE = "xkcd-specials/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -357,6 +406,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NRQ2A5FE8M;
 				INFOPLIST_FILE = "xkcd-specials/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
